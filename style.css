@@ -1,55 +1,267 @@
-/* ===== Base Section ===== */
-section {
-  padding: 3rem 1rem;
+/* ===== General Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #fefefe;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Navbar ===== */
+nav {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #27ae60;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: url('church-hero.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  background-color: rgba(0,0,0,0.5);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+/* ===== About Section ===== */
+.about {
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #27ae60;
+}
+
+.about p {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ===== Mission & Vision Highlight Section ===== */
+.highlight {
+  background: #f9f9f9;
+  padding: 4rem 1rem;
+}
+
+.highlight-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   max-width: 1100px;
   margin: auto;
 }
-h2 {
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #333;
-}
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
 
-/* About, Mission, Vision */
-.about p,
-.mission p,
-.vision p {
-  max-width: 800px;
-  margin: 0 auto 1rem auto;
-  text-align: center;
-}
-
-/* Mission list */
-.mission ul {
-  max-width: 800px;
-  margin: auto;
-  list-style: disc;
-  padding-left: 2rem;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Core Values */
-.values .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-.values .card {
+.highlight-box {
   background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
-.values .card:hover { transform: translateY(-5px); }
-.values h3 {
-  margin-bottom: 0.5rem;
+
+.highlight-box:hover {
+  transform: translateY(-5px);
+}
+
+.highlight h2 {
+  margin-bottom: 1rem;
+  text-align: left;
   color: #2c3e50;
 }
+
+.highlight p, 
+.highlight ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.highlight ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.mission-box {
+  border-left: 5px solid #27ae60;
+}
+
+.vision-box {
+  border-left: 5px solid #2980b9;
+}
+
+/* ===== Core Values Section ===== */
+.core-values {
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+
+.core-values h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2980b9;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.value-box {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.value-box:hover {
+  transform: translateY(-5px);
+}
+
+.value-box h3 {
+  margin-bottom: 0.5rem;
+  color: #27ae60;
+}
+
+/* ===== Events Section ===== */
+.events {
+  padding: 4rem 1rem;
+  background-color: #f4f4f4;
+}
+
+.events h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #27ae60;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.event-box {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.event-box:hover {
+  transform: translateY(-5px);
+}
+
+.event-box h3 {
+  margin-bottom: 1rem;
+  color: #2980b9;
+}
+
+.event-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: #27ae60;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .highlight-container {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-box {
+    text-align: center;
+  }
+
+  .highlight h2 {
+    text-align: center;
+  }
+}
+
