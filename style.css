@@ -9,138 +9,155 @@
 body {
   line-height: 1.6;
   color: #1a1a1a;
-  background-color: #e6f0fa; /* Soft blue background */
+  background-color: #f8faff;
 }
 
-/* ===== Church Header ===== */
+/* ===== Header & Navbar ===== */
 .church-header {
   text-align: center;
-  background-color: #1e3a8a; /* Dark blue */
+  background: linear-gradient(90deg, #1e3a8a, #3b5998);
   color: #ffffff;
   padding: 2rem 1rem;
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  font-weight: 700;
 }
 
 .church-header h1 {
-  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-/* ===== Navbar ===== */
-nav {
-  background-color: #2c5282; /* Blue shade */
-  padding: 1rem;
-}
-
-nav ul {
+.navbar ul {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
   gap: 2rem;
-  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
-nav ul li a {
+.navbar ul li a {
   color: #ffffff;
   font-weight: 500;
-  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  position: relative;
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  color: #a3c4f3; /* Soft blue hover */
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #a3c4f3;
+  transition: width 0.3s;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+.navbar ul li a:hover {
+  color: #a3c4f3;
 }
 
 /* ===== Hero Section ===== */
 .hero {
-  background-color: #a3c4f3; /* Soft blue */
+  background: linear-gradient(135deg, #a3c4f3, #e6f0fa);
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .hero h2 {
-  font-size: 1rem; /* Tiny scripture text */
+  font-size: 1.5rem;
   font-style: italic;
   color: #1e3a8a;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
-/* ===== Sections ===== */
-section {
+/* ===== Card Sections ===== */
+.card-section {
   max-width: 900px;
   margin: 3rem auto;
-  padding: 1rem;
+  padding: 2rem;
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
-section h2 {
+.card-section h2 {
   color: #1e3a8a;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-section p, section li {
+.card-section p,
+.card-section li {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 0.8rem;
 }
 
-/* ===== Lists Styling ===== */
-section ul {
+.card-section ul {
   list-style: disc;
   padding-left: 1.5rem;
 }
 
-/* ===== Contact Section ===== */
-#contact button {
+/* ===== Buttons ===== */
+button {
   background-color: #1e3a8a;
   color: #fff;
   border: none;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  border-radius: 6px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
-#contact button:hover {
+button:hover {
   background-color: #3b5998;
+  transform: translateY(-2px);
 }
 
 /* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem 1rem;
   background-color: #1e3a8a;
   color: #ffffff;
   margin-top: 2rem;
 }
 
-/* ===== Responsive Design ===== */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
-  .church-header {
+  .church-header h1 {
     font-size: 2rem;
   }
 
-  nav ul {
+  .navbar ul {
     flex-direction: column;
     gap: 1rem;
   }
 
-  section {
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .card-section {
     margin: 2rem 1rem;
+    padding: 1.5rem;
   }
 }
 
 @media (min-width: 1200px) {
-  section {
-    margin: 3rem auto;
-  }
-
   .hero h2 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 }
