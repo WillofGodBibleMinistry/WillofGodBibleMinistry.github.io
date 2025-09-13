@@ -3,213 +3,144 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   line-height: 1.6;
-  color: #333;
+  color: #1a1a1a;
   background-color: #e6f0fa; /* Soft blue background */
+}
+
+/* ===== Church Header ===== */
+.church-header {
+  text-align: center;
+  background-color: #1e3a8a; /* Dark blue */
+  color: #ffffff;
+  padding: 2rem 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.church-header h1 {
+  margin: 0;
 }
 
 /* ===== Navbar ===== */
 nav {
-  background-color: #1f3c88; /* Darker blue */
-  color: #fff;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav .logo {
-  font-size: 2rem; /* Larger for the church name */
-  font-weight: bold;
-  color: #ffffff;
+  background-color: #2c5282; /* Blue shade */
+  padding: 1rem;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
   color: #ffffff;
   font-weight: 500;
+  font-size: 1rem;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #a0c4ff; /* Lighter blue hover */
+  color: #a3c4f3; /* Soft blue hover */
 }
 
 /* ===== Hero Section ===== */
 .hero {
-  background-color: #b3d4fc; /* Soft blue block */
-  height: 60px; /* smaller height since no image */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #a3c4f3; /* Soft blue */
   text-align: center;
-  padding: 1rem;
-  border-radius: 8px;
-  margin: 1rem;
+  padding: 3rem 1rem;
 }
 
-.hero h1 {
+.hero h2 {
   font-size: 1rem; /* Tiny scripture text */
   font-style: italic;
-  color: #1f3c88;
+  color: #1e3a8a;
 }
 
-/* ===== Section Titles ===== */
-h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #1f3c88;
-  margin-bottom: 1rem;
-}
-
-/* ===== About, Mission, Vision, Core Values ===== */
+/* ===== Sections ===== */
 section {
-  padding: 2rem 1rem;
-}
-
-.about, .highlight, .core-values, .events {
-  background-color: #f0f7ff; /* Soft blue background for all sections */
-  margin: 1rem auto;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: #ffffff;
   border-radius: 12px;
-  max-width: 1200px;
-  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Highlight boxes for Mission & Vision */
-.highlight-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+section h2 {
+  color: #1e3a8a;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.highlight-box {
-  background-color: #d0e4ff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-
-.mission-box {
-  border-left: 5px solid #1f3c88;
-}
-
-.vision-box {
-  border-left: 5px solid #4a90e2;
-}
-
-ul {
-  padding-left: 1.5rem;
+section p, section li {
+  font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 0.8rem;
 }
 
-/* ===== Core Values Grid ===== */
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+/* ===== Lists Styling ===== */
+section ul {
+  list-style: disc;
+  padding-left: 1.5rem;
 }
 
-.value-box {
-  background-color: #d9eaff;
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.value-box:hover {
-  transform: translateY(-5px);
-}
-
-.value-box h3 {
-  color: #1f3c88;
-  margin-bottom: 0.5rem;
-}
-
-/* ===== Events Grid ===== */
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.event-box {
-  background-color: #d0e4ff;
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.event-box h3 {
-  color: #4a90e2;
-  margin-bottom: 0.5rem;
-}
-
-/* ===== Contact Form ===== */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  margin: auto;
-}
-
-form input, form textarea, form button {
-  padding: 0.8rem;
-  border-radius: 6px;
-  border: 1px solid #b0c4e2;
-}
-
-form button {
-  background-color: #1f3c88;
+/* ===== Contact Section ===== */
+#contact button {
+  background-color: #1e3a8a;
   color: #fff;
   border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-form button:hover {
-  background-color: #4a90e2;
+#contact button:hover {
+  background-color: #3b5998;
 }
 
 /* ===== Footer ===== */
 footer {
-  background-color: #1f3c88;
-  color: #fff;
   text-align: center;
   padding: 1.5rem;
+  background-color: #1e3a8a;
+  color: #ffffff;
+  margin-top: 2rem;
 }
 
-footer a {
-  color: #a0c4ff;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Responsive ===== */
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
+  .church-header {
+    font-size: 2rem;
   }
 
-  .highlight-container {
-    grid-template-columns: 1fr;
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  section {
+    margin: 2rem 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    margin: 3rem auto;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
   }
 }
