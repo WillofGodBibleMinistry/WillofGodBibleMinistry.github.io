@@ -1,19 +1,21 @@
-// Register for events
+// script.js
+
+// Function for registering events
 function registerEvent(eventName) {
-  alert("Thank you for registering for " + eventName + "!");
+  alert("You have registered for: " + eventName);
 }
 
-// Contact form submission
+// Function for contact form submission
 function submitForm() {
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let message = document.getElementById("message").value;
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
   if (name && email && message) {
-    alert("Thank you, " + name + "! Your message has been received.");
-    return true;
+    alert("Thank you, " + name + "! Your message has been sent.");
+    return true; // Allow form submission (if you connect to backend/email later)
   } else {
     alert("Please fill in all fields.");
-    return false;
+    return false; // Prevents empty submission
   }
 }
