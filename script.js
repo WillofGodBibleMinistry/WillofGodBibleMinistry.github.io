@@ -16,7 +16,6 @@ function createModal(title, contentHtml) {
   document.body.appendChild(modal);
   modal.style.display = 'flex';
 
-  // Close modal on clicking the X
   modal.querySelector('.close-button').addEventListener('click', () => {
     modal.remove();
   });
@@ -41,27 +40,6 @@ function registerEvent(eventName) {
     e.preventDefault();
     const name = document.getElementById('participantName').value;
     alert(`Thank you, ${name}! You are registered for "${eventName}".`);
-    modal.remove();
-  });
-}
-
-/* ===== CONTACT FORM MODAL ===== */
-function openContactModal() {
-  const contentHtml = `
-    <form id="contactForm">
-      <input type="text" id="contactName" placeholder="Your Name" required>
-      <input type="email" id="contactEmail" placeholder="Your Email" required>
-      <textarea id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  `;
-
-  const modal = createModal('Contact Us', contentHtml);
-
-  modal.querySelector('#contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = document.getElementById('contactName').value;
-    alert(`Thank you, ${name}! Your message has been received.`);
     modal.remove();
   });
 }
@@ -127,9 +105,3 @@ style.innerHTML = `
   }
 `;
 document.head.appendChild(style);
-
-/* ===== CONTACT BUTTON EVENT ===== */
-document.addEventListener('DOMContentLoaded', function () {
-  const contactBtn = document.getElementById('contactBtn');
-  contactBtn.addEventListener('click', openContactModal);
-});
