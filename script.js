@@ -40,8 +40,6 @@ function registerEvent(eventName) {
   modal.querySelector('#eventForm').addEventListener('submit', function (e) {
     e.preventDefault();
     const name = document.getElementById('participantName').value;
-    const email = document.getElementById('participantEmail').value;
-
     alert(`Thank you, ${name}! You are registered for "${eventName}".`);
     modal.remove();
   });
@@ -63,17 +61,12 @@ function openContactModal() {
   modal.querySelector('#contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
     const name = document.getElementById('contactName').value;
-    const email = document.getElementById('contactEmail').value;
-    const message = document.getElementById('contactMessage').value;
-
     alert(`Thank you, ${name}! Your message has been received.`);
-
-    // Clear the form (optional)
     modal.remove();
   });
 }
 
-/* ===== DYNAMIC CSS FOR MODALS ===== */
+/* ===== DYNAMIC MODAL STYLING ===== */
 const style = document.createElement('style');
 style.innerHTML = `
   .modal {
@@ -88,60 +81,55 @@ style.innerHTML = `
     align-items: center;
     z-index: 1000;
   }
-
   .modal-content {
-    background-color: #e6f0ff;
+    background-color: #f8faff;
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 16px;
     max-width: 400px;
     width: 90%;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     position: relative;
   }
-
   .modal-content h2 {
-    color: #1f3c88;
+    color: #1e3a8a;
     margin-bottom: 1rem;
   }
-
   .modal-content input, 
   .modal-content textarea, 
   .modal-content button {
     width: 80%;
     padding: 0.7rem;
     margin: 0.5rem 0;
-    border-radius: 6px;
+    border-radius: 50px;
     border: 1px solid #b0c4e2;
     font-size: 1rem;
   }
-
   .modal-content button {
-    background-color: #1f3c88;
+    background-color: #1e3a8a;
     color: #fff;
     border: none;
     cursor: pointer;
     font-weight: bold;
+    transition: all 0.3s;
   }
-
   .modal-content button:hover {
-    background-color: #4a90e2;
+    background-color: #3b5998;
+    transform: translateY(-2px);
   }
-
   .close-button {
     position: absolute;
     top: 8px;
     right: 12px;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #1f3c88;
+    color: #1e3a8a;
   }
 `;
 document.head.appendChild(style);
 
-/* ===== EVENT LISTENER TO OPEN CONTACT MODAL ===== */
+/* ===== CONTACT BUTTON EVENT ===== */
 document.addEventListener('DOMContentLoaded', function () {
-  const contactSection = document.getElementById('contact');
-  contactSection.innerHTML = `<button id="contactBtn">Contact Us</button>`;
-  document.getElementById('contactBtn').addEventListener('click', openContactModal);
+  const contactBtn = document.getElementById('contactBtn');
+  contactBtn.addEventListener('click', openContactModal);
 });
