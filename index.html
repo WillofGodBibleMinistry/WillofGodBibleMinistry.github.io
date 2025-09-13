@@ -97,15 +97,32 @@
   <section id="events" class="card-section">
     <h2>Upcoming Events</h2>
     <ul>
-      <li>Thanksgiving Service – December 2025</li>
-      <li>Christmas Service – December 25, 2025</li>
+      <li>
+        Thanksgiving Service – December 2025
+        <button onclick="registerEvent('Thanksgiving Service')">Register</button>
+      </li>
+      <li>
+        Christmas Service – December 25, 2025
+        <button onclick="registerEvent('Christmas Service')">Register</button>
+      </li>
     </ul>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact (Original Google Form) -->
   <section id="contact" class="card-section">
     <h2>Contact Us</h2>
-    <button id="contactBtn">Send Us a Message</button>
+    <div class="form-container">
+      <!-- Original Google Form embedded here -->
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfEXAMPLE/viewform?embedded=true" 
+        width="100%" 
+        height="700" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">
+        Loading…
+      </iframe>
+    </div>
   </section>
 
   <!-- Footer -->
